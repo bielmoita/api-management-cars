@@ -1,0 +1,6 @@
+/Users/Biel/eclipse-workspace/api-management-cars/src/main/java/br/com/gabriel/apimanagementcars/models/Carro.java
+/Users/Biel/eclipse-workspace/api-management-cars/src/main/java/br/com/gabriel/apimanagementcars/services/CarroService.java
+/Users/Biel/eclipse-workspace/api-management-cars/src/main/java/br/com/gabriel/apimanagementcars/utils/StatusCarEnum.java
+/Users/Biel/eclipse-workspace/api-management-cars/src/main/java/br/com/gabriel/apimanagementcars/ApiManagementCarsApplication.java
+/Users/Biel/eclipse-workspace/api-management-cars/src/main/java/br/com/gabriel/apimanagementcars/repositories/CarroRepository.java
+/Users/Biel/eclipse-workspace/api-management-cars/src/main/java/br/com/gabriel/apimanagementcars/services/exceptions/ObjectNotFoundException.java
