@@ -47,6 +47,8 @@ Contrução uma API em <i>JAVA 11</i> para gerenciar carros. para que assim se t
 
 :warning: [Insominia](https://insomnia.rest/download)
 
+:warning: [Docker](https://www.docker.com/products/docker-desktop/)
+
 
 ## Como rodar a aplicação :arrow_forward:
 
@@ -56,26 +58,28 @@ No terminal, clone o projeto:
 https://github.com/bielmoita/api-management-cars
 ```
 
-Abra a IDE de sua preferencia, como sugestao deixei o link do IntelliJ acima.
+Abra o Docker em seu computador.
+Aponte para a pasta do projeto clonado
 
 Acesse o diretorio criado, busque pelo arquivo: 
 ```
-ApiManagementCarsApplication
+Dockerfile
 ```
-pressione para rodar o projeto em sua IDE
+pressione para rodar o projeto no Docker
 
 Devera subir os status de LOGs do Spring.
 
 Agora acesse a pasta de Collections e abra o Insominia em seu computador.
-
-Use as collections sempre enviando para o endereco da aplicaao
-```
-http://localhost:8080
-```
-Agora basta usar as collections que devem ser importadas no Insominia e cadastrar quantos carros voce desejar. Ver informações, excluir e etc.
 ```
 Collection-API-CAR.json
 ```
+
+Use as collections sempre enviando para o endereco da aplicação
+```
+http://localhost:8080
+```
+Agora basta usar as collections e cadastrar quantos carros voce desejar, ver informações, excluir e etc.
+
 
 Não se preocupe, quando você encerrar a aplicação o Banco de dados será <i>Resetado</i>, pois o mesmo estará rodando em sua memória. 
 
