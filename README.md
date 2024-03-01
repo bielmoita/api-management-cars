@@ -20,6 +20,9 @@
 <p align="justify">
 Contrução uma API em <i>JAVA 11</i> para gerenciar carros. para que assim se tenha controle de novos veiculos em aquisicao.
 </p>
+<p align="justify">
+Voce pode consultar o desenho técnico feito em <i>Draw.io</i> na raiz do projeto.
+</p>
 
 ## Funcionalidades
 
