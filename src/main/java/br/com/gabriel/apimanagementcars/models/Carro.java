@@ -17,9 +17,11 @@ import javax.persistence.*;
 //@Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"chassi","placa"})})
 public class Carro {
 
+    @Column(name = "id")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     @NotNull
     private String chassi;
 
@@ -32,6 +34,7 @@ public class Carro {
     private String color;
 
     private StatusCarEnum status;
+
     @NotNull
     private String placa;
 
