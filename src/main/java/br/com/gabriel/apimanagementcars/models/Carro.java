@@ -22,6 +22,7 @@ public class Carro {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(unique = true)
     @NotNull
     private String chassi;
 
@@ -35,6 +36,7 @@ public class Carro {
 
     private StatusCarEnum status;
 
+    @Column(unique = true)
     @NotNull
     private String placa;
 

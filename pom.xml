@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.gabriel</groupId>
 	<artifactId>api-management-cars</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>api-management-cars</name>
 	<description>Api de gerenciamento de Veiculos</description>
 	<properties>

@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.dao.DataIntegrityViolationException;
+import br.com.gabriel.apimanagementcars.services.exceptions.ObjectNotFoundException;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -19,16 +22,29 @@ public class CarroController {
     //Cadastrar Carro
     @PostMapping
     public ResponseEntity<?> createCarro (@RequestBody Carro carro){
-        carro = carroService.create(carro);
-        //return ResponseEntity.ok().body(carro);
+
+        try {
+            carro = carroService.create(carro);
+        } catch (DataIntegrityViolationException dex) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\n\"message:\" : \"chassi ou placa já registrada\"\n}");
+        }
+
         return new ResponseEntity( carro,HttpStatus.CREATED);
     }
 
     //Listar Carros
     @GetMapping
-    public ResponseEntity<?> listarCarros(){
-        List<Carro> carros = carroService.listarCarros();
-        return !carros.isEmpty() ? ResponseEntity.ok(carros) : ResponseEntity.noContent().build();
+    public ResponseEntity<?> listarCarros(@RequestParam(name = "name", required = false) String name,
+                                          @RequestParam(name = "manufacturer", required = false) String manufacturer,
+                                          @RequestParam(name = "year", required = false) String year){
+
+        try {
+            String resultado = carroService.listarCarros(name, manufacturer, year);
+            return ResponseEntity.ok(resultado);
+        } catch (ObjectNotFoundException ex){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+
     }
 
     //Ver Detalhes
@@ -52,7 +68,7 @@ public class CarroController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Carro> delecaoLogica(@PathVariable long id){
         boolean delecaoLogica = carroService.delecaoLogica(id);
-        return new ResponseEntity(delecaoLogica, HttpStatus.OK);
+        return new ResponseEntity("", HttpStatus.OK);
     }
 
 }

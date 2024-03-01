@@ -1,3 +1,8 @@
-br/com/gabriel/apimanagementcars/utils/StatusCarEnum.class
-br/com/gabriel/apimanagementcars/models/Carro$CarroBuilder.class
+br/com/gabriel/apimanagementcars/services/CarroService.class
 br/com/gabriel/apimanagementcars/models/Carro.class
+br/com/gabriel/apimanagementcars/services/exceptions/ObjectNotFoundException.class
+br/com/gabriel/apimanagementcars/ApiManagementCarsApplication.class
+br/com/gabriel/apimanagementcars/controllers/CarroController.class
+br/com/gabriel/apimanagementcars/utils/StatusCarEnum.class
+br/com/gabriel/apimanagementcars/repositories/CarroRepository.class
+br/com/gabriel/apimanagementcars/models/Carro$CarroBuilder.class
