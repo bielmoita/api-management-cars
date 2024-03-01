@@ -37,10 +37,6 @@ Contrução uma API em <i>JAVA 11</i> para gerenciar carros. para que assim se t
 
 :heavy_check_mark: Deleçao logica
 
-## Deploy da Aplicação :dash:
-
-Validar
-
 ## Pré-requisitos
 
 :warning: [Java11](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html)
@@ -76,16 +72,12 @@ Use as collections sempre enviando para o endereco da aplicaao
 ```
 http://localhost:8080
 ```
-Agora basta usar as collections e cadastrar quantos carros voce desejar.
+Agora basta usar as collections que devem ser importadas no Insominia e cadastrar quantos carros voce desejar. Ver informações, excluir e etc.
+```
+Collection-API-CAR.json
+```
 
-Nao se preocupe, quando voce encerrar a aplicacao o Banco de dados sera <i>Resetado</i>, pois o mesmo estara rodando em sua memoria. 
+Não se preocupe, quando você encerrar a aplicação o Banco de dados será <i>Resetado</i>, pois o mesmo estará rodando em sua memória. 
 
-## Desenvolvedores/Contribuintes :octocat:
+## Desenvolvedor :octocat:
 [<img src="https://avatars2.githubusercontent.com/u/49874403?s=400&u=732c2387f6b14597528e693927cd5af874c144d4&v=4" width=115><br><sub>Gabriel Fernando</sub>](https://www.linkedin.com/in/gabriel-fernando-mcsilva/) 
-
-## Licença 
-
-Copyright :copyright: 2024 - API Management Cars
-
-
-
