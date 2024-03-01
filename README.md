@@ -65,19 +65,27 @@ Acesse o diretorio criado, busque pelo arquivo:
 ```
 Dockerfile
 ```
-pressione para rodar o projeto no Docker
+pressione para rodar o projeto no Docker.
 
-Devera subir os status de LOGs do Spring.
+com o terminal aberto com o diretorio do projeto, execute o seguinte comando para construir a imagem Docker:
+```
+docker build -t api-car-management .
+```
+Executar um contêiner:
+```
+docker run -p 8080:8080 api-car-management
+```
+
+Agora a aplicacao estara rodando no endereço da aplicação
+```
+http://localhost:8080
+```
 
 Agora acesse a pasta de Collections e abra o Insominia em seu computador.
 ```
 Collection-API-CAR.json
 ```
 
-Use as collections sempre enviando para o endereco da aplicação
-```
-http://localhost:8080
-```
 Agora basta usar as collections e cadastrar quantos carros voce desejar, ver informações, excluir e etc.
 
 
@@ -85,3 +93,23 @@ Não se preocupe, quando você encerrar a aplicação o Banco de dados será <i>
 
 ## Desenvolvedor :octocat:
 [<img src="https://avatars2.githubusercontent.com/u/49874403?s=400&u=732c2387f6b14597528e693927cd5af874c144d4&v=4" width=115><br><sub>Gabriel Fernando</sub>](https://www.linkedin.com/in/gabriel-fernando-mcsilva/) 
+
+
+
+Passo 2: Construa a imagem Docker
+Abra um terminal na raiz do seu projeto e execute o seguinte comando para construir a imagem Docker:
+
+bash
+Copy code
+docker build -t nome-da-sua-imagem .
+Isso criará uma imagem Docker com o nome especificado (substitua "nome-da-sua-imagem" pelo nome desejado) usando as instruções do seu Dockerfile.
+
+Passo 3: Execute o contêiner
+Depois de construir a imagem, você pode executar o contêiner com o seguinte comando:
+
+bash
+Copy code
+docker run -p 8080:8080 nome-da-sua-imagem
+Isso mapeia a porta 8080 do contêiner para a porta 8080 do seu host. Se o seu aplicativo Spring Boot estiver configurado para usar uma porta diferente, ajuste a porta no comando acima.
+
+Agora, seu aplicativo Spring Boot deve estar acessível em http://localhost:8080.
